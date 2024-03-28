@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>No Derby</title>
+    <style>
+        body {
+            background-color: #FFFF00; /* Yellow background */
+            color: #0000FF; /* Blue text */
+            text-align: center;
+            font-size: 36px;
+            font-weight: bold;
+            margin-top: 100px;
+        }
+
+        img {
+            width: 400px; /* Adjust the width as needed */
+            height: auto; /* Maintain aspect ratio */
+            margin-top: 20px; /* Add some margin at the top */
+        }
+    </style>
+</head>
+
+<body>
+    <br>
+    <div class="nav">
+        <a href="index.html">home</a>
+        <a href="no_derby.html">no win</a>
+        <a href="pic.html">picture</a>
+        <a href="register.html">register</a>
+    </div>
+    <br>
+    <h1>Days That Hapoel Still Don't Win the Derby:</h1>
+    <div id="countdown"></div>
+
+    <script>
+        // Set the target date for the derby win (3624 days from now)
+        var targetDate = new Date();
+        targetDate.setDate(targetDate.getDate() - 3624);
+
+        // Function to update the countdown timer
+        function updateCountdown() {
+            var currentDate = new Date();
+            var difference = currentDate.getTime() - targetDate.getTime();
+
+            // Calculate days, hours, minutes, and seconds
+            var days = Math.floor(difference / (1000 * 60 * 60 * 24));
+
+            // Display the countdown
+            document.getElementById('countdown').textContent = days + " days";
+        }
+
+        // Update the countdown every second
+        setInterval(updateCountdown, 1000);
+    </script>
+    <img src="upload/hapoelCry.jpg" alt="cry">
+</body>
+
+</html>
